@@ -5,9 +5,19 @@ import "./Navbar.css";
 import { SlMenu } from "react-icons/sl";
 import { GoSearch } from "react-icons/go";
 import { FaLocationDot } from "react-icons/fa6";
+import SignInModal from "../Auth/Login/Login";
 
 function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isSignInModalOpen, setSignInModalOpen] = useState(false);
+
+  const openSignInModal = () => {
+    setSignInModalOpen(true);
+  };
+
+  const closeSignInModal = () => {
+    setSignInModalOpen(false);
+  };
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
@@ -52,7 +62,7 @@ function Navbar() {
           <FaLocationDot />
         </div>
         <div className="sign-in">
-          <button>Sign In</button>
+          <button onClick={openSignInModal}>Sign In</button>
         </div>
         <div className="menu-icon" onClick={toggleSidebar}>
           <SlMenu />
@@ -68,6 +78,8 @@ function Navbar() {
           {/* Add more sidebar items as needed */}
         </div>
       )}
+
+      <SignInModal isOpen={isSignInModalOpen} onClose={closeSignInModal} />
     </div>
   );
 }
