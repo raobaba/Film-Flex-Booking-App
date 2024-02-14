@@ -1,0 +1,79 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px;
+    background-color: #333;
+    color: #fff;
+  }
+ 
+  .left-side {
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .brand span {
+    color: #ff6600; 
+  }
+  
+  .search-bar {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-icon {
+    margin-left: -20px;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .search-bar input {
+    width: 250px; 
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+
+  }
+
+  .right-side {
+    display: flex;
+    align-items: center;
+  }
+  
+  .location,
+  .sign-in,
+  .menu-icon {
+    margin-right: 20px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .location-text {
+    margin-right: 5px;
+    font-size: 1rem;
+  }
+  
+  .sign-in button {
+    padding: 8px 15px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+      .sign-in, .location {
+        display: none;
+      }
+  }
+  
