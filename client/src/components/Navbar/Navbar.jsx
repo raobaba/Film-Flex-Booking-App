@@ -5,7 +5,7 @@ import "./Navbar.css";
 import { SlMenu } from "react-icons/sl";
 import { GoSearch } from "react-icons/go";
 import { FaLocationDot } from "react-icons/fa6";
-import SignInModal from "../Auth/Login/Login";
+import SignInModal from "../Auth/Login";
 
 function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
