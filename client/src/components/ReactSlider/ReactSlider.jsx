@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 function ReactSlider() {
   return (
-    <div>
+    <div className='react-slider'>
       <Carousel autoPlay showThumbs={false} showStatus={false} infiniteLoop>
         <div>
           <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1706382336630_web.jpg" alt="Slide 1" />

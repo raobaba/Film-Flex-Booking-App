@@ -8,7 +8,7 @@
   
   .left-section, .right-section {
     display: flex;
-    gap: 10px;
+    gap: 1px;
   }
   
   .nav-button {
@@ -19,17 +19,29 @@
     border-radius: 5px;
     background-color: #F5F5F5;
   }
-  
-  /* Media Query for responsiveness */
-  @media (max-width: 768px) {
+
+  @media (max-width: 868px) {
     .bottom-nav-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .left-section, .right-section {
-      flex-direction: column;
-      text-align: center;
+        display: flex;
+        background-color: #F5F5F5;
+        color: white;
+        gap: 1px;
+      }
+      .left-section {
+        display: flex;
+        gap: 1px;
+      }
+
+      .right-section {
+        display: flex;
+        gap: 1px;
+      }
+}
+
+
+  @media (max-width: 768px) {
+    .bottom-nav-container{
+        display: none;
     }
   }
   
