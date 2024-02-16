@@ -6,6 +6,7 @@ import { SlMenu } from "react-icons/sl";
 import { GoSearch } from "react-icons/go";
 import { FaLocationDot } from "react-icons/fa6";
 import SignInModal from "../Auth/Login";
+import BottomNav from "./BottomNav";
 
 function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -44,6 +45,7 @@ function Navbar() {
   }, [sidebarRef]);
 
   return (
+    <>
     <div className="navbar-container">
       <div className="left-side">
         <div className="brand">
@@ -80,7 +82,10 @@ function Navbar() {
       )}
 
       <SignInModal isOpen={isSignInModalOpen} onClose={closeSignInModal} />
+    
     </div>
+      <BottomNav/>
+      </>
   );
 }
 
