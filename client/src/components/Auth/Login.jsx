@@ -1,31 +1,55 @@
-import React from "react";
+// SignInModal.js
+
+import React, { useState } from "react";
 import { RiCloseLine } from "react-icons/ri";
-import "./Login.css"
-import { FaGoogle, FaEnvelope, FaApple } from "react-icons/fa"; 
+import { FaGoogle, FaEnvelope, FaApple } from "react-icons/fa";
+import "./Login.css";
 
 function SignInModal({ isOpen, onClose }) {
+  const [showProceedButton, setShowProceedButton] = useState(false);
+
+  const handleOnlickInput = () => {
+    setShowProceedButton(true);
+  };
+
   return (
     <div className={`modal ${isOpen ? "open" : ""}`}>
       <div className="modal-content">
         <div className="modal-header">
-          <span className="close-icon" onClick={onClose}>
+          <div className="modal-title">Get Started</div>
+         <div>
+         <button className="close-icon" onClick={onClose}>
             <RiCloseLine />
-          </span>
+          </button>
+         </div>
         </div>
         <div className="modal-body">
-          {/* Modal content goes here */}
-          <h2>Sign In</h2>
-          <button>
-            <FaGoogle /> Continue with Google
-          </button>
-          <button>
-            <FaEnvelope /> Continue with Email
-          </button>
-          <button>
-            <FaApple /> Continue with Apple
-          </button>
-          <input type="text" placeholder="Enter your phone number" />
-          <p>Terms and conditions text goes here.</p>
+          <div className="button-container">
+            <button className="button">
+              <FaGoogle className="react-icon"/>
+              Continue with Google
+            </button>
+            <button className="button">
+              <FaEnvelope className="react-icon"/>
+              Continue with Email
+            </button>
+            <button className="button">
+              <FaApple className="react-icon"/>
+              Continue with Apple
+            </button>
+          </div>
+          <input
+            type="text"
+            placeholder="Enter phone or email"
+            onClick={handleOnlickInput}
+          />
+          {showProceedButton ? (
+            <button className="proceed-button">Proceed</button>
+          ) : (
+            <div className="terms-condition-text">
+              Terms and conditions apply
+            </div>
+          )}
         </div>
       </div>
     </div>
